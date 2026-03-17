@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "products")
+
 public class Product {
 
     @Id
@@ -15,9 +16,11 @@ public class Product {
     private double price;
     private int quantity;
 
+    // Default constructor
     public Product() {
     }
 
+    // Parameterized constructor
     public Product(String name, String description, double price, int quantity) {
         this.name = name;
         this.description = description;
@@ -25,10 +28,12 @@ public class Product {
         this.quantity = quantity;
     }
 
+    // Getter for id
     public int getId() {
         return id;
     }
 
+    // Getter and Setter for name
     public String getName() {
         return name;
     }
@@ -37,6 +42,7 @@ public class Product {
         this.name = name;
     }
 
+    // Getter and Setter for description
     public String getDescription() {
         return description;
     }
@@ -45,6 +51,7 @@ public class Product {
         this.description = description;
     }
 
+    // Getter and Setter for price
     public double getPrice() {
         return price;
     }
@@ -53,6 +60,7 @@ public class Product {
         this.price = price;
     }
 
+    // Getter and Setter for quantity
     public int getQuantity() {
         return quantity;
     }
